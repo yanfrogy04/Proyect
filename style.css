@@ -1,0 +1,217 @@
+*::before,::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* navbar */
+body {
+    background-color: #fff;
+}
+
+.menu{
+    color: rgb(251, 251, 251);
+    background-color: rgb(0, 0, 0);
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(135, 34, 224);
+    box-shadow: 5px 0 10px rgb(176, 15, 15);
+}
+
+.logo{
+    color: #fff;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+}
+
+.menu_list{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu_list li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu_list li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+.menu_list li:hover, li.active {
+    background-color: rgba(57, 48, 189, 0.584);
+    border: 1px solid rgba(255, 255, 255, 0.998); ;
+    transition: .4s;
+}
+
+.btn_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+ul.show{
+    top: 65px;
+}
+
+@media screen and (max-width:952px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 35px;
+    }
+    .menu_list{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:858px) {
+    .menu{
+        height: 65px;
+    }
+    .btn_menu{
+        display: inline-flex;
+    }
+    .menu_list{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background-color: gray;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu_list li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    
+    .menu_list li:hover{
+        background: none;
+    }
+    .menu_list li a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .menu_list li a:hover {
+        color: rgb(255, 255, 255);
+    }
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}
+@media screen and (max-width: 858px) and (orientation: landscape) {
+    .menu_list li {
+        margin: 5px 0 0 0;
+    }
+    .menu_list{
+        overflow: scroll;
+        height: calc(100% - 65 px);
+    }
+}
+
+/* intro */
+
+.intro{
+    background-image: url(/imagenes/liyue.jfif);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 35px;
+    margin: 5%;
+}
+
+/* card */
+
+.cards img{
+    max-width: 100%;
+}
+
+article.card{
+    max-width: 350px;
+    background-color: rgb(218, 183, 227);
+    border-radius: 8;
+    margin: 1rem;
+    box-shadow: 0 0 12px rgb(120, 27, 159);
+}
+
+.header_card img{
+    border-radius: 8px 8px 0 0;
+    max-height: 100%;
+    max-width: 100%;
+
+}
+
+.categoria_card{
+    margin-top: 1rem;
+}
+
+.categoria_card span{
+    background-color: rgb(195, 16, 226);
+    color: #fff;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+}
+
+.card footer{
+    padding: 0 1rem;
+}
+
+.perfil_card{
+    display: flex;
+    align-items: center;
+}
+
+.img_perfil_card{
+    width: 50px;
+    margin: 1rem 1rem 1rem 0;
+    border-radius: 50%;
+
+}
+
+.text_perfil_card{
+    display: flex;
+    flex-flow: column;
+}
+
+.text_perfil_card span:nth-child(2){
+    color: blueviolet;
+}
+
+.cards{
+    display: flex;
+    flex-flow: wrap;
+}
+
+/* reparacion */
+.img_reparacion{
+    height: 50vh;
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text_reparacion{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
